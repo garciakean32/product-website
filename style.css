@@ -1,0 +1,55 @@
+body {
+    height: 100vh;
+}
+
+
+.white-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 8px black;
+    padding: 15px;
+    margin: 20px;
+    margin-top: 160px;
+    gap: 15px;
+    border-radius: 8px;
+    width: 600px;
+}
+
+
+.text {
+    color: rgb(71, 71, 71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button {
+    background-color: rgb(73, 155, 248);
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    cursor: pointer;
+
+}
+
+.q-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(73, 155, 248);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
