@@ -20,14 +20,14 @@
             </div>
 
             <div class="text">
-                <div>
+                <b>
                     Jansport Backpack
-                </div>
-                <div>
-                    <b>₱ 850</b>
+                </b>
+                <div style="color: rgb(73, 155, 248);">
+                    <b>₱ 850.00</b>
                 </div>
             </div>
-            <button class="button" onclick="show()" id="box1">
+            <button class="button" onclick="buyNow()" id="box1">
                 BUY NOW
             </button>
         </div>
@@ -51,15 +51,15 @@
                     <div>
                         Jansport Backpack
                     </div>
-                    <div>
-                        <b>₱ 850</b>
+                    <div style="color: rgb(73, 155, 248);">
+                        <b>₱ 850.00</b>
                     </div>
                     <div>
                         <div>
                             Shipping To: Cagayan de Oro City
                         </div>
                         <div>
-                            Shipping fee: 69
+                            Shipping fee: ₱ 69.00
                         </div>
                     </div>
                 </div>
@@ -67,9 +67,9 @@
                     <div>
                         Quantity:
                     </div>
-                    <button class="q-button"><b>-</b></button>
-                    <div>1</div>
-                    <button class="q-button"><b>+</b></button>
+                    <button class="q-button" onclick="sub()"><b>-</b></button>
+                    <div id="q">1</div>
+                    <button class="q-button" onclick="add()"><b>+</b></button>
                 </div>
             </div>
         </div>
@@ -77,23 +77,95 @@
 
         <!-- when buy me button is clicked box2-->
 
-        <div style="display:flex; justify-content: center;">
+        <div style="display:flex; justify-content: center; ">
             <div class="white-box" id="box3" style="display: none;">
-                <div class="text">
-                    <div>
-                        <b><u>Ready to Checkout?</u></b>
-                        <div style="display: flex; flex-direction: row; gap: 100px;">
-                            <div>
-                                Subtotal:
+                <div>
+                    <div class="text" style="gap: 70px;">
+                        <div>
+                            <b><u>Ready to Checkout?</u></b>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 60px; ">
+                            <div style="display: flex; gap: 280px;
+                            font-size: 25px; ">
+                                <div id="q">
+                                    Subtotal:
+                                </div>
+                                <div>
+                                    ₱ <span id="subtotal">850.00</span>
+                                </div>
                             </div>
-                            <div>
-                                ₱ 850
+                            <div style="display: flex; justify-content: space-between; font-size: 25px;">
+                                <div>
+                                    Quantity:
+                                </div>
+                                <div>
+                                    <span id="quantity">1</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 25px;">
+                                <div>
+                                    Shipping Fee:
+                                </div>
+                                <div>
+                                    ₱ 69.00
+                                </div>
+
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 25px; color: rgb(73, 155, 248);">
+                                <div>
+                                    <b>Total:</b>
+                                </div>
+                                <div>
+                                    <b>₱ <span id="total">919.00</span></b>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: center; font-size: 25px;">
+                                <button class="button" onclick="checkout()">
+                                    <b>Checkout</b>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Your Order -->
+
+
+        <div class="white-box" id="box4"
+            style="display:flex; justify-content: center;  flex-direction: row; width: 800px; display: none; font-size: 20px;">
+            <div>
+                <img src=" image/Jansport Mens Superbreak Backpack - ₱750.00.jpg" width="200px" height="300px" ;>
+
+                <img src="image/Jansport Womens Backpack - ₱850.00.jpg" width="200px" height="300px" ;>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <b>Jansport Backpack</b>
+                </div>
+                <div>
+                    <b style="color: rgb(73, 155, 248);">₱ 850.00</b>
+                </div>
+                <div style="display: flex; flex-direction: row; gap: 4px;">
+                    <div>
+                        Quantity:
+                    </div>
+                    <b id="checkout-quantity">
+                    </b>
+                    <div>
+                        |
+                    </div>
+                    <div>
+                        Shipping Free: <b>₱ 69.00</b>
+                    </div>
+                </div>
+                <b id="checkout-total" style="display: flex; gap: 4px; color: rgb(73, 155, 248);">
+                </b>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
